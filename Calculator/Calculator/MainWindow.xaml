@@ -5,8 +5,61 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Calculator" Height="434.8" Width="658.6">
     <Grid>
-        
+        <GroupBox x:Name="groupBox" Header="" HorizontalAlignment="Left" Margin="377,89,0,0" VerticalAlignment="Top" Height="240" Width="240">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="0" Grid.Column="0"  x:Name="button11" Content="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50"  Click="button_Click"/>
+                <Button Grid.Row="0" Grid.Column="1"  x:Name="button2" Content="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50" Click="button_Click"/>
+                <Button Grid.Row="0" Grid.Column="2"  x:Name="button3" Content="3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50"  Click="button_Click"/>
+                <Button Grid.Row="1" Grid.Column="0"  x:Name="button4" Content="4" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50"  Click="button_Click"/>
+                <Button Grid.Row="1" Grid.Column="1"  x:Name="button5" Content="5" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50"  Click="button_Click"/>
+                <Button Grid.Row="1" Grid.Column="2"  x:Name="button6" Content="6" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50"  Click="button_Click"/>
+                <Button Grid.Row="2" Grid.Column="0"  x:Name="button7" Content="7" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50"  Click="button_Click"/>
+                <Button Grid.Row="2" Grid.Column="1"  x:Name="button8" Content="8" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50"  Click="button_Click"/>
+                <Button Grid.Row="2" Grid.Column="2"  x:Name="button9" Content="9" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50"  Click="button_Click"/>
+                <Button Grid.Row="3" Grid.Column="0"  x:Name="button" Content="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50"  Click="button_Click"/>
+                <Button Grid.Row="0" Grid.Column="3"  x:Name="buttonC" Content="C" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50"  Click="C_Click"/>
+                <Button Grid.Row="3" Grid.Column="3"  x:Name="buttonComma" Content="," HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50"  Click="button_Click"/>
+                <Button Grid.Row="3" Grid.Column="1"  x:Name="LeftSq" Content="[" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50"  Click="button_Click"/>
+                <Button Grid.Row="3" Grid.Column="2"  x:Name="RightSq" Content="]" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50"  Click="button_Click"/>
+                <Button Grid.Row="1" Grid.Column="3"  x:Name="LeftRnd" Content="(" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50"  Click="button_Click"/>
+                <Button Grid.Row="2" Grid.Column="3"  x:Name="RightRnd" Content=")" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50"  Click="button_Click"/>
+            </Grid>
+        </GroupBox>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="28" Margin="32,34,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="585"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="97" VerticalAlignment="Top" Width="179" Margin="32,94,0,0"/>
+        <ListBox x:Name="listBox_Copy" HorizontalAlignment="Left" Height="97" VerticalAlignment="Top" Width="179" Margin="32,244,0,0"/>
+        <Menu Background="White" Margin="0,0,555,371.6">
+            <MenuItem Header="Commands" BorderThickness="1" Background="#FFF1E9E9" BorderBrush="#FF9C939C" Height="22" Width="88">
+                <MenuItem Header="Add variable..." />
+                <Separator />
+                <MenuItem Header="Add const..." />
+                <Separator />
+                <MenuItem Header="Delete variable..." />
+                <Separator />
+                <MenuItem Header="Delete const..." />
+                <Separator />
+                <MenuItem Header="Exit"/>
+            </MenuItem>
+        </Menu>
+        <Label x:Name="Variables" Content="Variables" HorizontalAlignment="Left" Margin="32,67,0,0" VerticalAlignment="Top" Width="179" Height="27"/>
+        <Label x:Name="Constants" Content="Constants" HorizontalAlignment="Left" Margin="32,217,0,0" VerticalAlignment="Top" Width="179" Height="27"/>
+        <Button x:Name="eval" Content="Evaluate" HorizontalAlignment="Left" Margin="513,358,0,0" VerticalAlignment="Top" Width="104" Height="28"/>
+        <Button x:Name="extend" Content="Extend the formula" HorizontalAlignment="Left" Margin="377,358,0,0" VerticalAlignment="Top" Width="104" Height="28"/>
+        <Button x:Name="Back" Content="Delete the latest extention" HorizontalAlignment="Right" Margin="0,70,35,0" VerticalAlignment="Top" Width="144"/>
+
     </Grid>
 </Window>
