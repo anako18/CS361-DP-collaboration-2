@@ -1,0 +1,23 @@
+﻿<Window x:Class="Calculator.Operation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="Choose an operation" Height="300" Width="300" Closing="Window_Closing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Grid.Row ="0" x:Name="union" Content="Union" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120" Height="28"/>
+        <Button Grid.Row ="1" x:Name="intersection" Content="Intersection" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120" Height="28"/>
+        <Button Grid.Row ="2" x:Name="complement" Content="Complement" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120" Height="28"/>
+        <Button Grid.Row ="3" x:Name="symm_dif" Content="Symmetric difference" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120" Height="28"/>
+        <Button Grid.Row ="4" x:Name="eratosthene" Content="Eratosthenes Sieve" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120" Height="28"/>
+    </Grid>
+</Window>
